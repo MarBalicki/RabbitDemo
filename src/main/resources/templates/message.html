@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Message</title>
+</head>
+<body>
+<form th:action="@{/mvc/message}" th:object="${message}" method="post">
+    <div>
+        <div>
+            <label>Odbiorca</label>
+            <input type="text" th:field="*{routingKey}"/>
+        </div>
+        <div>
+            <label>Wiadomość</label>
+            <input type="text" th:field="*{text}"/>
+        </div>
+        <div class="col-sm-10">
+            <button type="submit">Wyślij</button>
+            <button type="reset">Wyczyść</button>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>
